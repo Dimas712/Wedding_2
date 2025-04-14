@@ -233,13 +233,14 @@
 		counterWayPoint();
 	});
 
-	var to = GetURLParameter("to");
-	if (to) {
-	const decodedTo = decodeURIComponent(to.replace(/\+/g, ' '));
-	document.getElementById("Name").textContent = decodedTo;
-	} else {
-	document.getElementById("Name").textContent = "-";
-	}
-
 
 }());
+
+
+var to = GetURLParameter("to");
+if (to) {
+const decodedTo = decodeURIComponent(to.replace(/\+/g, ' '));
+document.getElementById("Name").textContent = decodedTo;
+} else {
+document.getElementById("Name").textContent = "-";
+}
